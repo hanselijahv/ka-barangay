@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "423460419524",
+    "project_id": "kabarangay-84ccd",
+    "storage_bucket": "kabarangay-84ccd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423460419524:android:422155f72a6a751f111691",
+        "android_client_info": {
+          "package_name": "com.example.kabarangay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6NcYeZ1of4OAzEuMrg0CnBosJVf0M7R4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
