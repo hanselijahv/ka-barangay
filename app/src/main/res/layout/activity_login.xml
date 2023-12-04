@@ -101,11 +101,15 @@
                 android:textStyle="bold"
                 app:drawableStartCompat="@drawable/lock_icon" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/password_icon"
                 android:hint="@string/password"
                 android:textSize="15sp"
                 android:fontFamily="@font/sora"
@@ -113,6 +117,8 @@
                 android:alpha="0.5"
                 android:textColorHint="@color/primary"
                 android:autofillHints="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
