@@ -9,4 +9,13 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="sign_in">Sign In</string>
     <string name="create_account">Create Account</string>
+    <string name="get_started">Get Started</string>
+    <string name="get_Started">Get Started</string>
+    <string name="ka_barangay_kaagapay">Ka-Barangay, Kaagapay!</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="full_name">Full Name</string>
+    <string name="sign_in_">Sign In</string>
+    <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="sign_up__">Sign Up</string>
 </resources>

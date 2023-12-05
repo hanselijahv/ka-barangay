@@ -3,10 +3,13 @@ package com.example.kabarangay;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,11 +31,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        adjustScreen();
 
         editTextEmail = findViewById(R.id.email_login);
         editTextPassword = findViewById(R.id.password_login);
         login = findViewById(R.id.login_button);
         signUp = findViewById(R.id.account_notexist);
+
+        editTextEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeKeyboard();
+            }
+        });
+
+        editTextPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeKeyboard();
+            }
+        });
 
         signUp.setOnClickListener(this);
 
@@ -64,12 +82,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         });
             }
         });
+        overridePendingTransition(R.anim.enter_anim, R.anim.exit_anim);
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.account_notexist){
             startActivity(new Intent(this, SignUpActivity.class));
+        }
+    }
+    public void adjustScreen(){
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+    }
+
+    public void closeKeyboard(){
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 }

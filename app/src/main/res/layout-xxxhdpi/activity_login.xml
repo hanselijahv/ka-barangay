@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.5"
-        android:background="@drawable/initial" />
+        android:background="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,21 +24,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sorts_mill_goudy"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
             android:text="@string/kabarangay"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="60sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="300dp"
+        android:padding="50dp"
+        app:cardElevation="100dp"
         app:cardCornerRadius="28dp"
         android:layout_marginBottom="-28dp">
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,15 +51,14 @@
             android:padding="28dp"
             android:layout_marginBottom="0dp">
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Welcome Back"
-                android:fontFamily="@font/sora"
+                android:fontFamily="@font/sora_semibold"
+                android:text="@string/welcome_back"
                 android:textColor="@color/primary"
-                android:textSize="30sp"
+                android:textSize="19sp"
                 android:textStyle="bold" />
 
             <View
@@ -66,25 +69,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/email"
-                android:fontFamily="@font/sora"
+                android:fontFamily="@font/sora_semibold"
                 android:drawablePadding="8dp"
                 android:textSize="22sp"
                 android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:drawableStartCompat="@drawable/email_icon" />
+                android:textStyle="bold" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
-                android:fontFamily="@font/sora"
+                android:fontFamily="@font/sora_semibold"
                 android:textSize="15sp"
                 android:alpha="0.5"
+                android:inputType="textEmailAddress"
                 android:textColorHint="@color/primary"
-                android:drawableEnd="@drawable/done_icon"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                android:hint="@string/email" />
 
             <View
                 android:layout_width="wrap_content"
@@ -92,31 +93,30 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:fontFamily="@font/sora"
+                android:fontFamily="@font/sora_semibold"
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
                 android:text="@string/password1"
                 android:textSize="22sp"
                 android:textColor="@color/primary"
-                android:textStyle="bold"
-                app:drawableStartCompat="@drawable/lock_icon" />
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                android:alpha="0.5">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                android:textSize="15sp"
-                android:fontFamily="@font/sora"
-                android:inputType="textPassword"
-                android:alpha="0.5"
-                android:textColorHint="@color/primary"
-                android:autofillHints="" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/sora_semibold"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/primary"
+                    android:autofillHints="" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -127,7 +127,7 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sora"
+                    android:fontFamily="@font/sora_semibold"
                     android:text="@string/remember_me"
                     android:textColor="@color/primary"
                     android:layout_centerVertical="true"
@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/sora_extrabold"
+                    android:fontFamily="@font/sora_semibold"
                     android:text="@string/forgot_password"
                     android:textAllCaps="false"
                     android:background="@null"
@@ -158,7 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/round_style"
-                android:fontFamily="@font/sora"
+                android:fontFamily="@font/sora_semibold"
                 android:text="@string/sign_in"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
@@ -181,14 +181,14 @@
                     android:layout_height="wrap_content"
                     android:text="Don't have an account?"
                     android:textSize="14sp"
-                    android:fontFamily="@font/sora"
+                    android:fontFamily="@font/sora_semibold"
                     android:textColor="@color/primary"/>
 
                 <TextView
                     android:id="@+id/account_notexist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sora_extrabold"
+                    android:fontFamily="@font/sora_semibold"
                     android:text="Sign Up"
                     android:textSize="14sp"
                     android:layout_marginLeft="10dp"

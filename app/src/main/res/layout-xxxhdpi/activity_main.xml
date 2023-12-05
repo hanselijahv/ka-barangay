@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -25,9 +26,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/sorts_mill_goudy"
             android:text="@string/kabarangay"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="600dp"
             android:textColor="@color/white"
-            android:textSize="40sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
@@ -37,7 +38,7 @@
             android:text="Ka-Barangay, Kaagapay!"
             android:textColor="@color/white"
             android:fontFamily="@font/sorts_mill_goudy"
-            android:textSize="20sp"/>
+            android:textSize="24sp"/>
 
         <View
             android:layout_width="wrap_content"
@@ -48,12 +49,13 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@drawable/round_style"
-            app:backgroundTint="@color/orange_accent"
+            android:fontFamily="@font/sora_semibold"
             android:text="Get Started"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/orange_accent" />
 
         <View
             android:layout_width="wrap_content"

@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.5"
-        android:background="@drawable/initial" />
+        android:background="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,116 +24,142 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sorts_mill_goudy"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
             android:text="@string/kabarangay"
-            android:textColor="@color/white"
-            android:textSize="60sp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-28dp"
-        app:cardCornerRadius="28dp">
-
+        android:padding="20dp"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-28dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
             android:orientation="vertical"
-            android:padding="28dp">
-
+            android:padding="28dp"
+            android:layout_marginBottom="0dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/sora"
-                android:text="Welcome"
+                android:fontFamily="@font/sora_semibold"
+                android:text="@string/welcome_back"
                 android:textColor="@color/primary"
-                android:textSize="30sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="15dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawablePadding="8dp"
-                android:fontFamily="@font/sora"
                 android:text="@string/email"
+                android:fontFamily="@font/sora_semibold"
+                android:textSize="18sp"
                 android:textColor="@color/primary"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:drawableStartCompat="@drawable/email_icon" />
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email_signup"
+                android:id="@+id/email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:alpha="0.5"
                 android:autofillHints=""
-                android:drawableEnd="@drawable/done_icon"
-                android:fontFamily="@font/sora"
-                android:hint="@string/email"
+                android:fontFamily="@font/sora_semibold"
+                android:textSize="11sp"
+                android:alpha="0.5"
                 android:inputType="textEmailAddress"
-                android:minHeight="48dp"
                 android:textColorHint="@color/primary"
-                android:textSize="15sp" />
+                android:hint="@string/email" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:fontFamily="@font/sora_semibold"
                 android:layout_height="wrap_content"
                 android:drawablePadding="8dp"
-                android:fontFamily="@font/sora"
                 android:text="@string/password1"
+                android:textSize="18sp"
                 android:textColor="@color/primary"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                app:drawableStartCompat="@drawable/lock_icon" />
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                android:alpha="0.5">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password_signup"
+                    android:id="@+id/password_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:alpha="0.5"
-                    android:autofillHints=""
-                    android:fontFamily="@font/sora"
                     android:hint="@string/password"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/sora_semibold"
                     android:inputType="textPassword"
-                    android:minHeight="48dp"
                     android:textColorHint="@color/primary"
-                    android:textSize="15sp"
-                    app:passwordToggleEnabled="true"
-                    tools:ignore="TextContrastCheck" />
+                    android:autofillHints="" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sora_semibold"
+                    android:text="@string/remember_me"
+                    android:textSize="11sp"
+                    android:textColor="@color/primary"
+                    android:layout_centerVertical="true"
+                    android:alpha="1"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/sora_semibold"
+                    android:text="@string/forgot_password"
+                    android:textSize="11sp"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    android:textColor="#C67C4E"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="10dp"/>
 
             <Button
-                android:id="@+id/sign_up"
+                android:id="@+id/login_button"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:background="@drawable/round_style"
-                android:fontFamily="@font/sora"
-                android:text="@string/create_account"
+                android:fontFamily="@font/sora_semibold"
+                android:text="@string/sign_in"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
@@ -142,37 +168,38 @@
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+                android:layout_height="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sora"
-                    android:text="Already have an account?"
-                    android:textColor="@color/primary"
-                    android:textSize="14sp" />
+                    android:text="Don't have an account?"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/sora_semibold"
+                    android:textColor="@color/primary"/>
 
                 <TextView
-                    android:id="@+id/account_exists"
+                    android:id="@+id/account_notexist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:fontFamily="@font/sora_semibold"
+                    android:text="Sign Up"
+                    android:textSize="11sp"
                     android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/sora_extrabold"
-                    android:text="Sign In"
                     android:textColor="@color/orange_accent" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="10dp"/>
+
 
 
         </LinearLayout>
