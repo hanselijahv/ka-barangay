@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="@drawable/initial" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sorts_mill_goudy"
+            android:text="@string/kabarangay"
+            android:layout_marginTop="350dp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/ka_barangay_kaagapay"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sorts_mill_goudy"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+
+        <Button
+            android:id="@+id/get_started"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/round_style"
+            android:fontFamily="@font/sora_semibold"
+            android:text="@string/get_Started"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/orange_accent" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "423460419524",
-    "project_id": "kabarangay-84ccd",
-    "storage_bucket": "kabarangay-84ccd.appspot.com"
+    "project_number": "355231897216",
+    "project_id": "kabarangay-6baca",
+    "storage_bucket": "kabarangay-6baca.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:423460419524:android:422155f72a6a751f111691",
+        "mobilesdk_app_id": "1:355231897216:android:8384b3f72054f3b188b865",
         "android_client_info": {
           "package_name": "com.example.kabarangay"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB6NcYeZ1of4OAzEuMrg0CnBosJVf0M7R4"
+          "current_key": "AIzaSyC62pS-nngwQJGe-QKU3SOVtameL-BrdaM"
         }
       ],
       "services": {
